@@ -8,12 +8,13 @@
 <body>
   <div class="well">
     <h2>Welcome!</h2>
-    <input type="text" class="form-control" placeholder="Dein Name...">
+    <form method="POST" action="login.php">
+    <input type="text" class="form-control" placeholder="Dein Name..." name="username">
 <br>
-    <input type="password" class="form-control" placeholder="Dein Passwort...">
+    <input type="password" class="form-control" placeholder="Dein Passwort..." name="password">
 <br>
     <input type="submit" class="btn btn-danger btn-block" value="Go Niggah!">
-    
+  </form>
   </div>
 
 </body>
