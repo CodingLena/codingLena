@@ -1,4 +1,9 @@
 body{
-  background-color: blue;
-  color: white;
+  background-color: darkred;
+  color: green;
+  text-align: center;
+}
+h2{
+  background-color: white;
+  margin-top: 30%;
 }
