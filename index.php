@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CodingLena</title>
-<link rel="stylesheet" href="assets/default/style.css">
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-</head>
+<?php require_once('head.html'); ?>
 <body>
-<div class="well">
-<img src="http://pix.echtlustig.com/d/1411/ich-will-eine-eule_6.jpg" alt="Eulenbild" class="img-thumbnail">
-<h2>Willkommen!</h2>
-<form method="POST" action="login.php">
-<input type="text" class="form-control" placeholder="Dein Name..." name="username" autofocus>
-<br>
-<input type="password" class="form-control" placeholder="Dein Passwort..." name="password">
-<hr>
-<input type="submit" class="btn btn-success" value="Login">
-</form>
-</div>
+  <div class="row">
+    <br>
+    <div class="col-xs-6 col-md-4"></div>
+    <div class="col-xs-6 col-md-4 well">
+      <img src="assets/img/cake_header.png" alt="Kuchen">
+      <br>
+    <h2>Hallo</h2>
+    <form method="POST" action="login.php">
+      <input type="text" class="form-control" placeholder="Dein Name..." name="username" autofocus required>
+      <br>
+      <input type="password" class="form-control" placeholder="Dein Passwort..." name="password" required>
+      <hr>
+      <input type="submit" class="btn btn-info btn-block" value="Login">
+    </form>
+    </div>
+    <div class="col-xs-6 col-md-4"></div>
+  </div>
 </body>
 </html>
