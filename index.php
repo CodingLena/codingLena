@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-<?php require_once('head.html'); ?>
-<body>
-  <div class="row">
-    <br>
-    <div class="col-xs-6 col-md-4"></div>
+  <?php require_once('head.html');?>
+ <body>
 
-    <div class="col-xs-6 col-md-4 well">
-      <img src="assets/img/cake_header.png" alt="Kuchen">
-      <br>
-    <h2>Das L in Lena steht für LSD.</h2>
-    <form method="POST" action="login.php">
-      <input type="text" class="form-control" placeholder="Dein Name..." name="username" autofocus required>
-      <br>
-      <input type="password" class="form-control" placeholder="Dein Passwort..." name="password" required>
-      <hr>
-      <input type="submit" class="btn btn-info btn-block" value="Login">
+  <div class="well">
+    <img src="assets/img/cake_header.png">
+     <h2>Willkommen!</h2>
+    <form method="POST" action="login.php" id="sexyFormular">
+<input type="text" class="form-control" placeholder="Name..." name="name" autofocus required>
+<br>
+<input type="password" class="form-control" placeholder="Passwort..." name="password" required>
+<hr>
+<input type="submit" class="btn btn-danger btn-block" value="Login" id="hallo">
     </form>
-    </div>
-
-    <div class="col-xs-6 col-md-4"></div>
   </div>
-</body>
+ </body>
 </html>
+
+<script>
+$("#hallo").click(function(){
+    $('input#hallo').removeClass('btn-danger').addClass('btn-success');
+});
+
+
+$("#sexyFormular").submit(function(e)
+{
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        success:function(data, textStatus, jqXHR)
+        {
+
+        }
+    });
+    e.preventDefault(); //STOP default action
+});
+</script>
